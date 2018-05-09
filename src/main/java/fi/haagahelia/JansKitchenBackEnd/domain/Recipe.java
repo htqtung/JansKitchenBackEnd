@@ -14,7 +14,9 @@ import javax.persistence.OneToMany;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
+import lombok.Data;
 
+@Data
 @Entity
 public class Recipe {
 	@Id
@@ -51,14 +53,6 @@ public class Recipe {
 		this.postTime = postTime;
 		this.servings = servings;
 	}
-	
-	public String getPhoto() {
-		return photo;
-	}
-
-	public void setPhoto(String photo) {
-		this.photo = photo;
-	}
 
 	public long getId() {
 		return id;
@@ -90,6 +84,14 @@ public class Recipe {
 
 	public void setTimeToCook(String timeToCook) {
 		this.timeToCook = timeToCook;
+	}
+
+	public String getPhoto() {
+		return photo;
+	}
+
+	public void setPhoto(String photo) {
+		this.photo = photo;
 	}
 
 	public List<Ingredient> getIngredients() {
@@ -139,4 +141,5 @@ public class Recipe {
 	public void setUser(User user) {
 		this.user = user;
 	}
+	
 }
